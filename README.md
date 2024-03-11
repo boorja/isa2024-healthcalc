@@ -59,3 +59,6 @@ En esta practica se nos pide enumar los casos de prueba para la calculadora usan
 
 Una vez definidos los tests, se ha implementado la calculadora en el archivo "HealthCalcImpl.java" y los tests en "HealthCalcTest.java". Podemos ver que todos los tests pasan correctamente en la siguiente imagen:
     ![tests_realizados](./images/tests.png "Tests pasados")
+
+Tras varios intentos de que se vea la imagen en este archivo, queda un arbol de la siguiente forma:
+    ![arbol](./images/arbol.png "arbol")
