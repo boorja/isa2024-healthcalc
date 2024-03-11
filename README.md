@@ -57,4 +57,7 @@ En esta practica se nos pide enumar los casos de prueba para la calculadora usan
     - Input: Altura (Height), género (Gender), peso (Weight) y edad (Age).
     - Output Esperado: Valor del BMR.
 
+Una vez definidos los tests, se ha implementado la calculadora en el archivo "HealthCalcImpl.java" y los tests en "HealthCalcTest.java". Podemos ver que todos los tests pasan correctamente en la siguiente imagen:
+    ![tests_realizados](tests_pract1.png)
 
+Se nos queda
