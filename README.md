@@ -64,7 +64,7 @@ Tras varios intentos de que se vea la imagen en este archivo, queda un arbol de 
     ![arbol](./images/arbol.png "arbol")
 
 # Practica 2
-Este es el diagrama de casos de uso:
+Este es el diagrama de casos de uso donde hemos añadido dos nuevos casos de uso, IMC (peso/(altura^2)) e ingesta de agua diaria (peso*0.03)
     ![CasosUso](./images/DiagramaCasosUso.png "CasosUso")
 
 ## Especificación de Caso de Uso (Peso Ideal)
