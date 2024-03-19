@@ -67,3 +67,22 @@ Tras varios intentos de que se vea la imagen en este archivo, queda un arbol de 
 Este es el diagrama de casos de uso:
     ![CasosUso](./images/DiagramaCasosUso.png "CasosUso")
 
+## Especificación de Caso de Uso (Peso Ideal)
+    Nombre: Calculo del Peso Ideal.
+    Actor Principal: Usuario.
+    Alcance: Aplicación calculadora de salud.
+    Nivel: user-goal.
+    StakeHolders:
+        - Usuario que quiere conocer su peso ideal.
+    Precondiciones: La aplicacion es funcional para el usuario.
+    Garantías Mínimas: Lanza un mensaje de error en caso de fallo.
+    Garantías de Éxito: Devuelve el peso ideal.
+    Escenario Principal:
+        1. El usuario selecciona la opcion  "Peso Ideal".
+        2. El usuario introduce los parámetros necesarios.
+        3. El sistema devuelve el resultado.
+    Extensiones:
+        2a. Parámetros incorrectos.
+            2a1. Muestra un mensaje de error indicando los parametros erróneos. Vuelve a paso 2.
+
+
