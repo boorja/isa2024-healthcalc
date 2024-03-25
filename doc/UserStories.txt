@@ -1,0 +1,40 @@
+
+============================
+		USER STORIES
+============================
+	
+1) IDEAL WEIGHT
+	
+	AS A user
+	I WANT to know my ideal weight
+	SO THAT I can set a goal for my fitness journey
+
+	Acceptance Criteria:
+		Scenario 1:
+			GIVEN I am an app user
+			WHEN I input my gender and height correctly
+			THEN the calculator returns the ideal weight
+
+		Scenario 2:
+			GIVEN I am an app user
+			WHEN I input my gender or height incorrectly
+			THEN the calculator returns an error
+
+
+2) BASAL METABOLIC RATE (BMR)
+	
+	AS A user
+	I WANT to know my BMR
+	SO THAT I can control my calory intake
+
+	Acceptance Criteria:
+		Scenario 1:
+			GIVEN I am an app user
+			WHEN I input my weight, height, age and gender correctly
+			THEN the calculator returns the BMR
+
+		Scenario 2:
+			GIVEN I am an app user
+			WHEN I input my weight, height, age and gender incorrectly
+			THEN the calculator returns an error
+
