@@ -1,66 +1,41 @@
 Health calculator
 
-# Practica 1
-En esta practica se nos pide enumar los casos de prueba para la calculadora usando un lenguaje llano. A continuacion se presentan los tests subdivididos en los dos metodos:
+# PRACTICA 3
 
-## Ideal Weight (IW)
+## Users Stories
+### Ideal Weight
+	
+AS A user
+I WANT to know my ideal weight
+SO THAT I can set a goal for my fitness journey
 
-- **TEST 1: Invalid Height**
-    - Descripcion: Lanza un error cuando el parametro Height no es valido.
-    - Input: Valor negativo o cero de Height.
-    - Output Esperado: Error indicando el motivo.
+Acceptance Criteria:
+    Scenario 1: try getting ideal weight with correct parameters
+        GIVEN I am an app user
+        WHEN I input my gender and height correctly
+        THEN the calculator returns the ideal weight
 
-- **TEST 2: Invalid Gender**
-    - Descripcion: Lanza un error cuando el parametro Gender no es valido.
-    - Input: Valor diferente de "m" o "w".
-    - Output Esperado: Error indicando el motivo.
+    Scenario 2: try getting ideal weight with incorrect parameters
+        GIVEN I am an app user
+        WHEN I input my gender or height incorrectly
+        THEN the calculator returns an error
 
-- **TEST 3: IW for Male**
-    - Descripcion: Calcula el peso ideal para un hombre.
-    - Input: Altura (Height) y género (Gender).
-    - Output Esperado: Peso ideal en kg.
 
-- **TEST 4: IW for Female**
-    - Descripcion: Calcula el peso ideal para una mujer.
-    - Input: Altura (Height) y género (Gender).
-    - Output Esperado: Peso ideal en kg.
-    
-## Basal Metabolic Rate (BMR)
+### Basal Metabolic Rate (BMR)
+	
+AS A user
+I WANT to know my BMR
+SO THAT I can control my calory intake
 
-- **TEST 5: Invalid Weight**
-    - Descripcion: Lanza un error cuando el parametro Weight no es valido.
-    - Input: Valor negativo o cero de Weight.
-    - Output Esperado: Error indicando el motivo.
+Acceptance Criteria:
+    Scenario 1: try getting BMR with correct parameters
+        GIVEN I am an app user
+        WHEN I input my weight, height, age and gender correctly
+        THEN the calculator returns the BMR
 
-- **TEST 6: Invalid Height**
-    - Descripcion: Lanza un error cuando el parametro Height no es valido.
-    - Input: Valor negativo o cero de Height.
-    - Output Esperado: Error indicando el motivo.
-
-- **TEST 7: Invalid Gender**
-    - Descripcion: Lanza un error cuando el parametro Gender no es valido.
-    - Input: Valor diferente de "m" o "w".
-    - Output Esperado: Error indicando el motivo.
-
-- **TEST 8: Invalid Age**
-    - Descripcion: Lanza un error cuando el parametro Age no es valido.
-    - Input: Valor negativo o cero de Age.
-    - Output Esperado: Error indicando el motivo.
-
-- **TEST 9: BMR for Male**
-    - Descripcion: Calcula el BMR para un hombre.
-    - Input: Altura (Height), género (Gender), peso (Weight) y edad (Age).
-    - Output Esperado: Valor del BMR.
-
-- **TEST 10: BMR for Female**
-    - Descripcion: Calcula el BMR para una mujer.
-    - Input: Altura (Height), género (Gender), peso (Weight) y edad (Age).
-    - Output Esperado: Valor del BMR.
-
-Una vez definidos los tests, se ha implementado la calculadora en el archivo "HealthCalcImpl.java" y los tests en "HealthCalcTest.java". Podemos ver que todos los tests pasan correctamente en la siguiente imagen:
-    ![tests_realizados](./images/tests.png "Tests pasados")
-
-Tras varios intentos de que se vea la imagen en este archivo, queda un arbol de la siguiente forma:
-    ![arbol](./images/arbol.png "arbol")
+    Scenario 2: try getting BMR with incorrect parameters
+        GIVEN I am an app user
+        WHEN I input my weight, height, age and gender incorrectly
+        THEN the calculator returns an error
 
 
