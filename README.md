@@ -85,4 +85,20 @@ Este es el diagrama de casos de uso donde hemos añadido dos nuevos casos de uso
         2a. Parámetros incorrectos.
             2a1. Muestra un mensaje de error indicando los parametros erróneos. Vuelve a paso 2.
 
+# Practica 4
+En esta practica se nos pide realizar una interfaz grafica para nuestra aplicacion. En primer lugar, crearemos un prototipo usando el software "Pencil Project". Mas adelante desarrollaremos esta interfaz utilizando el entorno de desarrollo integrado en Eclipse, denominado "WindowBuilder".
+
+
+## Prototipo
+    ![Prototipo](./images/mockup.png "Prototipo")
+
+## Implementacion Final
+    ![gui](./images/gui.png "gui")
+
+## Ejecutable .jar
+Hemos obtenido el .jar a traves del entorno de eclipse y para probarlo se ha utilizado el siguiente comando:
+    java -jar healthcalc.jar  
+
+
+
 
