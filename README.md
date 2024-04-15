@@ -90,10 +90,10 @@ En esta practica se nos pide realizar una interfaz grafica para nuestra aplicaci
 
 
 ## Prototipo
-    ![Prototipo](./images/mockup.png "Prototipo")
+![Prototipo](./images/mockup.png "Prototipo")
 
 ## Implementacion Final
-    ![gui](./images/gui.png "gui")
+![gui](./images/gui.png "gui")
 
 ## Ejecutable .jar
 Hemos obtenido el .jar a traves del entorno de eclipse y para probarlo se ha utilizado el siguiente comando:
