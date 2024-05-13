@@ -2,6 +2,20 @@ package healthcalc;
 
 public class HealthCalcImpl implements HealthCalc {
     
+    // SINGULAR
+	private static HealthCalcImpl init;
+
+	private HealthCalcImpl() {
+		super();
+	}
+
+	public static HealthCalcImpl getInstance() {
+		if (init == null) {
+			init = new HealthCalcImpl();
+	    }
+	        return init;
+	 }
+    
     public float idealWeight(int height, char gender) throws Exception {
         
         float res = 0;

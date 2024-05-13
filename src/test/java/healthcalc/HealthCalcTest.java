@@ -1,7 +1,6 @@
 package healthcalc;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -9,7 +8,7 @@ import org.junit.jupiter.api.Test;
 @DisplayName("Tests para la calculadora de salud.")
 public class HealthCalcTest {
 
-	HealthCalc calculadora = new HealthCalcImpl();
+	HealthCalc calculadora = HealthCalcImpl.getInstance();
 
 	// TESTS para el método idealWeight(int height, char gender)
 

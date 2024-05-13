@@ -11,7 +11,7 @@ public class Controlador implements ActionListener{
 	private int height = 0;
 	private int age = 0;
 	private float weight = 0;
-	private HealthCalcImpl calculadora = new HealthCalcImpl();
+	private HealthCalcImpl calculadora = HealthCalcImpl.getInstance();
 	private Vista vista;
 	
 	public Controlador(HealthCalcImpl calc, Vista gui) {
