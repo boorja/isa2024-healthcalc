@@ -16,7 +16,7 @@ public class Main {
 					//================COMPROBAR ADAPTER================
 
 					HealthHospital calculadora = new adapter();
-					System.out.println(calculadora.bmr('m', 25, 1.77f, 76));
+					System.out.println(calculadora.bmr('m', 25, 1.77f, 76000));
 
 					//=================================================
 
