@@ -89,6 +89,7 @@ Este es el diagrama de casos de uso donde hemos añadido dos nuevos casos de uso
 En esta practica se nos pide realizar una interfaz grafica para nuestra aplicacion. En primer lugar, crearemos un prototipo usando el software "Pencil Project". Mas adelante desarrollaremos esta interfaz utilizando el entorno de desarrollo integrado en Eclipse, denominado "WindowBuilder".
 
 
+
 ## Prototipo
 ![Prototipo](./images/mockup.png "Prototipo")
 
@@ -98,6 +99,27 @@ En esta practica se nos pide realizar una interfaz grafica para nuestra aplicaci
 ## Ejecutable .jar
 Hemos obtenido el .jar a traves del entorno de eclipse y para probarlo se ha utilizado el siguiente comando:
     java -jar healthcalc.jar  
+
+
+# Practica 6
+En esta practica hemos implementado cuatro patrones de diseño los cuales son:
+
+## Patron Singular
+Este patrón nos garantiza que solo una instancia de la calculadora esté disponible en la aplicación, evitando la creación de múltiples instancias que podrían causar conflictos y comportamientos inesperados.
+    ![singular](./design_patterns/singular.png "singular")
+
+## Patron Adapter
+Este patrón nos permite adaptar la interfaz a la interfaz específica requerida por el hospital, sin necesidad de modificar la lógica de la calculadora original.
+    ![adapter](./design_patterns/adapter.png "adapter")
+
+## Patron Proxy
+Este patrón implementa la interfaz HealthStats, permitiendo registrar datos de los pacientes de forma anónima y calcular estadísticas, como la media de los valores introducidos y calculados.
+    ![proxy](./design_patterns/proxy.png "proxy")
+
+## Patron Decorador
+Este patrón permite agregar funcionalidades a la calculadora de salud, como la gestión de unidades de medida (europeas o americanas) y la visualización de mensajes en dos idiomas (español e inglés).
+    ![decorador](./design_patterns/decorador.png "decorador")
+
 
 
 
