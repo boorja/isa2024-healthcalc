@@ -8,15 +8,20 @@ public class adapter implements HealthHospital {
     }
 
     @Override
-    public float bmr(char genero, int edad, float altura, int peso) throws Exception{
+    public double bmr(char genero, int edad, float altura, int peso) throws Exception{
         //pasamos a metros y a gramos
-        return  calculadora.basalMetabolicRate((float) (peso/1000), (int) (altura*100), genero, edad);
+        float p = peso/1000;
+        int a = (int) altura*100;
+
+        return  calculadora.basalMetabolicRate(p, a, genero, edad);
     }
 
     @Override
-    public float pesoIdeal(char genero, float altura) throws Exception{
+    public int pesoIdeal(char genero, float altura) throws Exception{
         //pasamos a metros y a gramos
-        return  calculadora.idealWeight((int) (altura*100), genero)*1000;
+        int a = (int) altura*100;
+
+        return  (int) calculadora.idealWeight(a, genero);
     }
 
 
