@@ -102,14 +102,14 @@ Hemos obtenido el .jar a traves del entorno de eclipse y para probarlo se ha uti
 
 
 # Practica 6
-En esta practica hemos implementado cuatro patrones de diseño los cuales son:
+En esta practica hemos implementado cuatro patrones de diseño para satisfacer diferentes necesidades. A su vez, se han probado en el archivo Main.java para ver que en efecto todos funcionan. A continuacion se muestran los diagramas de todos los patrones:
 
 ## Patron Singular
 Este patrón nos garantiza que solo una instancia de la calculadora esté disponible en la aplicación, evitando la creación de múltiples instancias que podrían causar conflictos y comportamientos inesperados.
     ![singular](./design_patterns/singular.png "singular")
 
 ## Patron Adapter
-Este patrón nos permite adaptar la interfaz a la interfaz específica requerida por el hospital, sin necesidad de modificar la lógica de la calculadora original.
+Este patrón nos permite adaptar la interfaz a la interfaz específica requerida por el hospital Costa del Sol de Marbella, teniendo en cuenta que este hospital usa la altura en metros y el peso en gramos.
     ![adapter](./design_patterns/adapter.png "adapter")
 
 ## Patron Proxy
@@ -117,8 +117,13 @@ Este patrón implementa la interfaz HealthStats, permitiendo registrar datos de 
     ![proxy](./design_patterns/proxy.png "proxy")
 
 ## Patron Decorador
-Este patrón permite agregar funcionalidades a la calculadora de salud, como la gestión de unidades de medida (europeas o americanas) y la visualización de mensajes en dos idiomas (español e inglés).
+Este patrón nos permite agregar a la calculadora la gestión de unidades de medida (europeas o americanas) y la visualización de mensajes de salida en dos idiomas (español e inglés).
     ![decorador](./design_patterns/decorador.png "decorador")
+
+## Pruebas
+Estas son las pruebas del main.java
+    ![prueba](./images/prueba.png "prueba")
+
 
 
 

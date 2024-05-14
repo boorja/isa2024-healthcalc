@@ -51,6 +51,7 @@ public class Main {
 					System.out.println("Numero Total: " + proxy.numTotalPacientes());
 
 					//================COMPROBAR DECORADOR================
+					
 					System.out.println("\n\nPATRON DECORADOR");
 
 					// Creamos versiones europea y americana
