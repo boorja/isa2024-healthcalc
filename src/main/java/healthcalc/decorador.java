@@ -3,7 +3,7 @@ package healthcalc;
 public class decorador implements HealthHospital {
     protected HealthHospital calculadora;
 
-    public decorador( HealthHospital calculadora){
+    public decorador(HealthHospital calculadora){
         this.calculadora=calculadora;
     }
 
