@@ -9,7 +9,7 @@ public class adapter implements HealthHospital {
 
     @Override
     public double bmr(char genero, int edad, float altura, int peso) throws Exception{
-        //pasamos a metros y a gramos
+        //pasamos a cm y a kg
         float p = peso/1000;
         int a = (int) altura*100;
 
@@ -18,10 +18,10 @@ public class adapter implements HealthHospital {
 
     @Override
     public int pesoIdeal(char genero, float altura) throws Exception{
-        //pasamos a metros y a gramos
-        int a = (int) altura*100;
+        //pasamos a cm
+        float a = (altura*100);
 
-        return  (int) calculadora.idealWeight(a, genero);
+        return  (int) calculadora.idealWeight((int)a, genero);
     }
 
 
