@@ -45,7 +45,7 @@ public class Controlador implements ActionListener{
 						vista.errorBMR("Gender not selected.");
 					}
 					
-					float bmr = this.calculadora.basalMetabolicRate(weight, height, gender, age);
+					double bmr = this.calculadora.basalMetabolicRate(weight, height, gender, age);
 		            if (bmr > 0) {vista.setRes(bmr);}
 
 				} catch (Exception e0) {
@@ -67,7 +67,7 @@ public class Controlador implements ActionListener{
 						vista.errorIW("Gender not selected.");
 					}
 					
-					float idealWeight = this.calculadora.idealWeight(height, gender);
+					double idealWeight = this.calculadora.idealWeight(height, gender);
 		            if(idealWeight > 0) {vista.setRes(idealWeight);}
 					
 					

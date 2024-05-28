@@ -305,8 +305,8 @@ public class Vista {
 			return biw;
 		}
 		
-		public void setRes(float res) {
-			tRes.setText(String.valueOf(res));
+		public void setRes(double bmr) {
+			tRes.setText(String.valueOf(bmr));
 		}
 		
 		public void registrarControlador(ActionListener ctrl) {
