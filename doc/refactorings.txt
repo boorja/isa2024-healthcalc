@@ -41,8 +41,23 @@
     Descripcion:
         Creamos el enumerador Gender, cambiamos los char='m' a Gender.MALE y los char='w' a Gender.FEMALE.
     Cambios:
-        Creamos interfaz Gender.
+        Creamos enum Gender.
         Cambiamos de char a Gender en Controlador, adapter, CardiovascularMetrics, CardiovascularMetricsImpl, MetabolicMetrics, MetabolicMetricsImpl, HealthCalc y HealthCalcImpl.
+
+## Refactoring 4
+    Bad smell:
+        Muchos parámetros de entrada.
+    Refactorizacion:
+        Eliminacion de parámetros por medio de un objeto.
+    Tipo:
+        Class Refactoring
+    Descripcion:
+        Creamos la interfaz Person y creamos su implementacion la cual tiene metodos para obtener los parametros y dos constructores para los dos tipos de calculos.
+    Cambios:
+        Creamos interfaz Person
+        Creamos clase PersonImpl
+        Cambiamos a tipo person la entrada en CardiovascularMetrics, CardiovascularMetricsImpl, HealthCalc, HealthCalcImpl, MetabolicMetrics y MetabolicMetricsImpl.
+        Creamos objeto person con los datos en Controlador y Adapter
 
         
 

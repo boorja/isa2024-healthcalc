@@ -5,6 +5,8 @@ import java.awt.event.ActionEvent;
 
 import healthcalc.Gender;
 import healthcalc.HealthCalcImpl;
+import healthcalc.PersonImpl;
+import healthcalc.Person;
 
 
 public class Controlador implements ActionListener{
@@ -47,7 +49,8 @@ public class Controlador implements ActionListener{
 						vista.errorBMR("Gender not selected.");
 					}
 					
-					double bmr = this.calculadora.basalMetabolicRate(weight, height, gender, age);
+					Person person = new PersonImpl(weight, height, gender, age);
+					double bmr = this.calculadora.basalMetabolicRate(person);
 		            if (bmr > 0) {vista.setRes(bmr);}
 
 				} catch (Exception e0) {
@@ -69,7 +72,8 @@ public class Controlador implements ActionListener{
 						vista.errorIW("Gender not selected.");
 					}
 					
-					double idealWeight = this.calculadora.idealWeight(height, gender);
+					Person person = new PersonImpl(height, gender);
+					double idealWeight = this.calculadora.idealWeight(person);
 		            if(idealWeight > 0) {vista.setRes(idealWeight);}
 					
 					

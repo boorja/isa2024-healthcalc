@@ -18,13 +18,13 @@ public class HealthCalcImpl implements HealthCalc {
 	        return init;
 	 }
     
-    public double idealWeight(int height, Gender gender) throws Exception {
+    public double idealWeight(Person person) throws Exception {
         
-        return CM.getIdealWeight(height,gender);
+        return CM.getIdealWeight(person);
     }
 
-    public double basalMetabolicRate(float weight, int height, Gender gender, int age) throws Exception {
-        return MM.basalMetabolicRate(weight, height, gender, age);
+    public double basalMetabolicRate(Person person) throws Exception {
+        return MM.basalMetabolicRate(person);
     }
     
 }

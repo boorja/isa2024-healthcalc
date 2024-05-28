@@ -2,6 +2,6 @@ package healthcalc;
 
 public interface CardiovascularMetrics {
     
-    public double getIdealWeight(int height, Gender gender) throws Exception;
+    public double getIdealWeight(Person person) throws Exception;
     
 }

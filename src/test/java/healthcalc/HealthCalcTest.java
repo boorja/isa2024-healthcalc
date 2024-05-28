@@ -152,7 +152,7 @@ public class HealthCalcTest {
 		int age = 36;
 
 		double expected_bmr = (10*weight)+(6.25*height)-(5*age)-161;
-
+		
 		assertEquals(expected_bmr, calculadora.basalMetabolicRate(weight, height, gender, age));
 	}
 }

@@ -1,6 +1,6 @@
 package healthcalc;
 
-public class adapter implements HealthHospital {
+public class adapter implements HealthHospital{
     private HealthCalc calculadora;
     Gender g;
 
@@ -20,8 +20,9 @@ public class adapter implements HealthHospital {
         } else if (genero == 'w'){
             g = Gender.FEMALE;
         }
+        Person person = new PersonImpl(p, a, g, edad);
 
-        return  calculadora.basalMetabolicRate(p, a, g, edad);
+        return  calculadora.basalMetabolicRate(person);
     }
 
     @Override
@@ -36,7 +37,8 @@ public class adapter implements HealthHospital {
             g = Gender.FEMALE;
         }
 
-        return  (int) calculadora.idealWeight((int)a, g);
+        Person person = new PersonImpl(a, g);
+        return  (int) calculadora.idealWeight(person);
     }
 
 
