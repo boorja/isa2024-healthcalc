@@ -16,7 +16,7 @@ public class HealthCalcTest {
 	@DisplayName("Test 1: Lanzamiento de excepcion con altura no valida")
 	public void testIW_InvalidHeight() throws Exception {
 		int invalidHeight = -1;
-		char gender = 'm';
+		Gender gender = Gender.MALE;
 		
 		try {
             calculadora.idealWeight(invalidHeight, gender);
@@ -26,25 +26,26 @@ public class HealthCalcTest {
         }
 	}
 
-	@Test
-	@DisplayName("Test 2: Lanzamiento de excepcion con genero no valido")
-	public void testIW_InvalidGender() throws Exception {
-		int Height = 170;
-		char invalidGender = 'f';
+	// Este test no sirve por que al tener 2 opciones no puede ser invalido
+	// @Test
+	// @DisplayName("Test 2: Lanzamiento de excepcion con genero no valido")
+	// public void testIW_InvalidGender() throws Exception {
+	// 	int Height = 170;
+	// 	Gender invalidGender = null;
 		
-		try {
-            calculadora.idealWeight(Height, invalidGender);
-        } catch (Exception e) {
-            // Assert
-            assertEquals("Genero no valido", e.getMessage());
-        }
-	}
+	// 	try {
+    //         calculadora.idealWeight(Height, invalidGender);
+    //     } catch (Exception e) {
+    //         // Assert
+    //         assertEquals("Genero no valido", e.getMessage());
+    //     }
+	// }
 
 	@Test
 	@DisplayName("Test 3: Verifica la obtencion del resultado correcto para un hombre")
 	public void testIW_IW4Male() throws Exception {
 		int height = 180;
-		char gender = 'm';
+		Gender gender = Gender.MALE;
 		double expected_w = (50+(0.91*height-152.4));
 
 		assertEquals(expected_w, calculadora.idealWeight(height, gender));
@@ -54,7 +55,7 @@ public class HealthCalcTest {
 	@DisplayName("Test 4: Verifica la obtencion del resultado correcto para una mujer")
 	public void testIW_IW4Female() throws Exception {
 		int height = 180;
-		char gender = 'w';
+		Gender gender = Gender.FEMALE;
 		
 		double expected_iw = (45.5+(0.91*height-152.4));
 
@@ -69,7 +70,7 @@ public class HealthCalcTest {
 	public void testBMR_InvalidWeight() throws Exception {
 		float weight = -60;
 		int height = 170;
-		char gender = 'w';
+		Gender gender = Gender.FEMALE;
 		int age = 36;
 				
 		try {
@@ -85,7 +86,7 @@ public class HealthCalcTest {
 	public void testBMR_InvalidHeight() throws Exception {
 		float weight = 60;
 		int height = -170;
-		char gender = 'w';
+		Gender gender = Gender.FEMALE;
 		int age = 36;
 				
 		try {
@@ -96,28 +97,29 @@ public class HealthCalcTest {
         }
 	}
 
-	@Test
-	@DisplayName("Test 7: Lanzamiento de excepcion con genero no valido")
-	public void testBMR_InvalidGender() throws Exception {
-		float weight = 60;
-		int height = 170;
-		char gender = 'f';
-		int age = 36;
+	// Pasa igual que con el anterior
+	// @Test
+	// @DisplayName("Test 7: Lanzamiento de excepcion con genero no valido")
+	// public void testBMR_InvalidGender() throws Exception {
+	// 	float weight = 60;
+	// 	int height = 170;
+	// 	Gender gender = null;
+	// 	int age = 36;
 				
-		try {
-            calculadora.basalMetabolicRate(weight, height, gender, age);
-        } catch (Exception e) {
-            // Assert
-            assertEquals("Genero no valido", e.getMessage());
-        }
-	}
+	// 	try {
+    //         calculadora.basalMetabolicRate(weight, height, gender, age);
+    //     } catch (Exception e) {
+    //         // Assert
+    //         assertEquals("Genero no valido", e.getMessage());
+    //     }
+	// }
 
 	@Test
 	@DisplayName("Test 8: Lanzamiento de excepcion con edad no valida")
 	public void testBMR_InvalidAge() throws Exception {
 		float weight = 60;
 		int height = 170;
-		char gender = 'w';
+		Gender gender = Gender.FEMALE;
 		int age = -36;
 				
 		try {
@@ -133,7 +135,7 @@ public class HealthCalcTest {
 	public void testBMR_BMR4Male() throws Exception {
 		float weight = 60;
 		int height = 170;
-		char gender = 'm';
+		Gender gender = Gender.MALE;
 		int age = 36;
 
 		double expected_bmr = (10*weight)+(6.25*height)-(5*age)+5;
@@ -146,7 +148,7 @@ public class HealthCalcTest {
 	public void testBMR_BMR4Female() throws Exception {
 		float weight = 60;
 		int height = 170;
-		char gender = 'w';
+		Gender gender = Gender.FEMALE;
 		int age = 36;
 
 		double expected_bmr = (10*weight)+(6.25*height)-(5*age)-161;
