@@ -124,6 +124,73 @@ Este patrón nos permite agregar a la calculadora la gestión de unidades de med
 Estas son las pruebas del main.java
     ![prueba](./images/prueba.png "prueba")
 
+# Practica 7
+
+## Refactoring 1
+- Bad smell:
+    - Principio de segregación de interfaces
+- Refactorizacion:
+    - Extracción de clases.
+    - Hacemos una interfaz para cada operación, diviendo la interfaz original en dos.
+- Tipo:
+    - Class Refactoring
+- Descripcion:
+    - HealthCalcImp tiene ahora dos objetos nuevos (CardiovascularMetricsImpl y MetaboliMetricsImpl) que usa para implementar los metodos.
+- Cambios:
+    - Creacion de dos interfaces nuevas (MetabolicMetrics y CardiovascularMetrics), 
+    - Implementacion de ambas interfaces en 2 nuevas clases, 
+    - Modificacion de 2 métodos de HealthCalcImpl
+    - Se añaden 2 objetos a la clase HealthCalcImpl.
+
+## Refactoring 2
+- Bad smell:
+    - Tipos numericos diferentes
+- Refactorizacion:
+    - Modificacion de tipo de dato.
+    - Cambiamos el tipo de diferentes variables.
+- Tipo:
+    - Method Refactoring
+- Descripcion:
+    - Cambiamos la salida de float a double y por tanto cambiamos todas las instancias de tipo.
+- Cambios:
+    - Cambiamos tipo en metodos CardiovascularMetrics y MetabolicMetrics
+    - Cambiamos tipo en metodos CardiovascularMetricsImpl y MetabolicMetricsImpl
+    - Cambiamos tipo en dos metodos en HealthCalcImpl
+    - Cambiamos tipo en dos metodos en HealthCalc
+    - Cambiamos dos tipos en metodo de Controlador
+
+## Refactoring 3
+- Bad smell:
+    - Tipo de variable de genero incorrecta.
+- Refactorizacion:
+    - Modificacion de tipo de dato.
+- Tipo:
+    - Attribute Refactoring
+- Descripcion:
+    - Creamos el enumerador Gender, cambiamos los char='m' a Gender.MALE y los char='w' a Gender.FEMALE.
+- Cambios:
+    - Creamos enum Gender.
+    - Cambiamos de char a Gender en Controlador, adapter, CardiovascularMetrics, CardiovascularMetricsImpl, MetabolicMetrics, MetabolicMetricsImpl, HealthCalc y HealthCalcImpl.
+
+## Refactoring 4
+- Bad smell:
+    - Muchos parámetros de entrada.
+- Refactorizacion:
+    - Eliminacion de parámetros por medio de un objeto.
+- Tipo:
+    - Class Refactoring
+- Descripcion:
+    - Creamos la interfaz Person y creamos su implementacion la cual tiene metodos para obtener los parametros y dos constructores para los dos tipos de calculos.
+- Cambios:
+    - Creamos interfaz Person
+    - Creamos clase PersonImpl
+    - Cambiamos a tipo person la entrada en CardiovascularMetrics, CardiovascularMetricsImpl, HealthCalc, HealthCalcImpl, MetabolicMetrics y MetabolicMetricsImpl.
+    - Creamos objeto person con los datos en Controlador y Adapter
+
+        
+
+
+
 
 
 
