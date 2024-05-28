@@ -45,7 +45,7 @@ public class HealthCalcTest {
 	public void testIW_IW4Male() throws Exception {
 		int height = 180;
 		char gender = 'm';
-		float expected_w = (float)(50+(0.91*height-152.4));
+		double expected_w = (50+(0.91*height-152.4));
 
 		assertEquals(expected_w, calculadora.idealWeight(height, gender));
 	}
@@ -56,7 +56,7 @@ public class HealthCalcTest {
 		int height = 180;
 		char gender = 'w';
 		
-		float expected_iw = (float)(45.5+(0.91*height-152.4));
+		double expected_iw = (45.5+(0.91*height-152.4));
 
 		assertEquals(expected_iw, calculadora.idealWeight(height, gender));
 	}
@@ -136,7 +136,7 @@ public class HealthCalcTest {
 		char gender = 'm';
 		int age = 36;
 
-		float expected_bmr = (float)((10*weight)+(6.25*height)-(5*age)+5);
+		double expected_bmr = (10*weight)+(6.25*height)-(5*age)+5;
 
 		assertEquals(expected_bmr, calculadora.basalMetabolicRate(weight, height, gender, age));
 	}
@@ -149,7 +149,7 @@ public class HealthCalcTest {
 		char gender = 'w';
 		int age = 36;
 
-		float expected_bmr = (float)((10*weight)+(6.25*height)-(5*age)-161);
+		double expected_bmr = (10*weight)+(6.25*height)-(5*age)-161;
 
 		assertEquals(expected_bmr, calculadora.basalMetabolicRate(weight, height, gender, age));
 	}
