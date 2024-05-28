@@ -7,9 +7,9 @@ public class MetabolicMetricsImpl implements MetabolicMetrics{
         double res = 0;
 
         if (person.gender().equals(Gender.MALE)){
-            res = ((10*person.weight())+(6.25*person.weight())-(5*person.age())+5);
+            res = ((10*person.weight())+(6.25*person.height())-(5*person.age())+5);
         } else if (person.gender().equals(Gender.FEMALE)){
-            res = ((10*person.weight())+(6.25*person.weight())-(5*person.age())-161);
+            res = ((10*person.weight())+(6.25*person.height())-(5*person.age())-161);
         } else if (person.weight() <= 0) {
             throw new Exception("Peso no valido");
         } else if (person.weight() <= 0) {

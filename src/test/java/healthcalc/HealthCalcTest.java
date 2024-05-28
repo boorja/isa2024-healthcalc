@@ -18,8 +18,10 @@ public class HealthCalcTest {
 		int invalidHeight = -1;
 		Gender gender = Gender.MALE;
 		
+		Person person = new PersonImpl(invalidHeight, gender);
+
 		try {
-            calculadora.idealWeight(invalidHeight, gender);
+            calculadora.idealWeight(person);
         } catch (Exception e) {
             // Assert
             assertEquals("Altura no valida", e.getMessage());
@@ -48,7 +50,8 @@ public class HealthCalcTest {
 		Gender gender = Gender.MALE;
 		double expected_w = (50+(0.91*height-152.4));
 
-		assertEquals(expected_w, calculadora.idealWeight(height, gender));
+		Person person = new PersonImpl(height, gender);
+		assertEquals(expected_w, calculadora.idealWeight(person));
 	}
 
 	@Test
@@ -59,7 +62,8 @@ public class HealthCalcTest {
 		
 		double expected_iw = (45.5+(0.91*height-152.4));
 
-		assertEquals(expected_iw, calculadora.idealWeight(height, gender));
+		Person person = new PersonImpl(height, gender);
+		assertEquals(expected_iw, calculadora.idealWeight(person));
 	}
 
 	
@@ -72,9 +76,11 @@ public class HealthCalcTest {
 		int height = 170;
 		Gender gender = Gender.FEMALE;
 		int age = 36;
+
+		Person person = new PersonImpl(weight, height, gender, age);
 				
 		try {
-            calculadora.basalMetabolicRate(weight, height, gender, age);
+            calculadora.basalMetabolicRate(person);
         } catch (Exception e) {
             // Assert
             assertEquals("Peso no valido", e.getMessage());
@@ -88,9 +94,11 @@ public class HealthCalcTest {
 		int height = -170;
 		Gender gender = Gender.FEMALE;
 		int age = 36;
+
+		Person person = new PersonImpl(weight, height, gender, age);
 				
 		try {
-            calculadora.basalMetabolicRate(weight, height, gender, age);
+            calculadora.basalMetabolicRate(person);
         } catch (Exception e) {
             // Assert
             assertEquals("Altura no valida", e.getMessage());
@@ -121,9 +129,11 @@ public class HealthCalcTest {
 		int height = 170;
 		Gender gender = Gender.FEMALE;
 		int age = -36;
+
+		Person person = new PersonImpl(weight, height, gender, age);
 				
 		try {
-            calculadora.basalMetabolicRate(weight, height, gender, age);
+            calculadora.basalMetabolicRate(person);
         } catch (Exception e) {
             // Assert
             assertEquals("Edad no valida", e.getMessage());
@@ -140,7 +150,8 @@ public class HealthCalcTest {
 
 		double expected_bmr = (10*weight)+(6.25*height)-(5*age)+5;
 
-		assertEquals(expected_bmr, calculadora.basalMetabolicRate(weight, height, gender, age));
+		Person person = new PersonImpl(weight, height, gender, age);
+		assertEquals(expected_bmr, calculadora.basalMetabolicRate(person));
 	}
 
 	@Test
@@ -151,8 +162,10 @@ public class HealthCalcTest {
 		Gender gender = Gender.FEMALE;
 		int age = 36;
 
+
 		double expected_bmr = (10*weight)+(6.25*height)-(5*age)-161;
-		
-		assertEquals(expected_bmr, calculadora.basalMetabolicRate(weight, height, gender, age));
+		Person person = new PersonImpl(weight, height, gender, age);
+
+		assertEquals(expected_bmr, calculadora.basalMetabolicRate(person));
 	}
 }
