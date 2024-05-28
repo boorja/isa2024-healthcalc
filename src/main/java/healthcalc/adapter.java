@@ -2,6 +2,7 @@ package healthcalc;
 
 public class adapter implements HealthHospital {
     private HealthCalc calculadora;
+    Gender g;
 
     public adapter(){
         calculadora = HealthCalcImpl.getInstance();
@@ -12,8 +13,15 @@ public class adapter implements HealthHospital {
         //pasamos a cm y a kg
         float p = peso/1000;
         int a = (int) altura*100;
+        
+        Gender g = null;
+        if (genero == 'm'){
+            g = Gender.MALE;
+        } else if (genero == 'w'){
+            g = Gender.FEMALE;
+        }
 
-        return  calculadora.basalMetabolicRate(p, a, genero, edad);
+        return  calculadora.basalMetabolicRate(p, a, g, edad);
     }
 
     @Override
@@ -21,7 +29,14 @@ public class adapter implements HealthHospital {
         //pasamos a cm
         float a = (altura*100);
 
-        return  (int) calculadora.idealWeight((int)a, genero);
+        Gender g = null;
+        if (genero == 'm'){
+            g = Gender.MALE;
+        } else if (genero == 'w'){
+            g = Gender.FEMALE;
+        }
+
+        return  (int) calculadora.idealWeight((int)a, g);
     }
 
 

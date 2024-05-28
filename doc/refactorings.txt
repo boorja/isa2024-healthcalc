@@ -31,5 +31,18 @@
         Cambiamos tipo en dos metodos en HealthCalc
         Cambiamos dos tipos en metodo de Controlador
 
+## Refactoring 3
+    Bad smell:
+        Tipo de variable de genero incorrecta.
+    Refactorizacion:
+        Modificacion de tipo de dato.
+    Tipo:
+        Attribute Refactoring
+    Descripcion:
+        Creamos el enumerador Gender, cambiamos los char='m' a Gender.MALE y los char='w' a Gender.FEMALE.
+    Cambios:
+        Creamos interfaz Gender.
+        Cambiamos de char a Gender en Controlador, adapter, CardiovascularMetrics, CardiovascularMetricsImpl, MetabolicMetrics, MetabolicMetricsImpl, HealthCalc y HealthCalcImpl.
+
         
 

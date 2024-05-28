@@ -2,12 +2,14 @@ package healthcalc.gui;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+
+import healthcalc.Gender;
 import healthcalc.HealthCalcImpl;
 
 
 public class Controlador implements ActionListener{
 
-	private char gender = 'x';
+	private Gender gender;
 	private int height = 0;
 	private int age = 0;
 	private float weight = 0;
@@ -38,9 +40,9 @@ public class Controlador implements ActionListener{
 					
 					
 					if (vista.getFemenino().isSelected()) {
-						gender = 'w';
+						gender = Gender.FEMALE;
 					} else if (vista.getMasculino().isSelected()){
-						gender = 'm';
+						gender = Gender.MALE;
 					} else {
 						vista.errorBMR("Gender not selected.");
 					}
@@ -60,9 +62,9 @@ public class Controlador implements ActionListener{
 
 					
 					if (vista.getFemenino().isSelected()) {
-						gender = 'w';
+						gender = Gender.FEMALE;
 					} else if (vista.getMasculino().isSelected()){
-						gender = 'm';
+						gender = Gender.MALE;
 					} else {
 						vista.errorIW("Gender not selected.");
 					}
