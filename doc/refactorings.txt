@@ -1,0 +1,13 @@
+## Refactoring 1
+    Bad smell:
+        Principio de segregación de interfaces
+    Extracción de clases:
+        hacemos una interfaz para cada operación, diviendo la interfaz original en dos.
+    Tipo:
+        Class Refactoring
+    Descripcion:
+        HealthCalcImp tiene ahora dos objetos nuevos (CardiovascularMetricsImpl y MetaboliMetricsImpl) que usa para implementar los metodos.
+    Cambios:
+        Se han creado 2 interfaces nuevas (MetabolicMetrics y CardiovascularMetrics), sus implementaciones en 2 nuevas clases, modificaciones en 2 metodos de HealthCalcImpl y se han añadido 2 objetos a esta clase.
+        Total de Cambios = 8
+
